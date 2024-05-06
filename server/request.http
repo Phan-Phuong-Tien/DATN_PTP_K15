@@ -1,0 +1,36 @@
+GET  http://localhost:8080/api/auth
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvYW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiJIb2FuMTIzNCIsImlhdCI6MTY2ODk0MDI1NSwiZXhwIjoxNjY4OTQwMzE1fQ.WlKvKlrzPUGvjYoFDT8n5VI4_6skrKpl1tyOxU4ODzk
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email" : "phuong@gmail.com",
+    "password": "Phuong1234"
+}
+
+###
+POST http://localhost:8080/api/auth/refresh
+Content-Type: application/json
+
+###
+POST http://localhost:8080/api/auth/logout
+Content-Type: application/json
+
+###
+POST http://localhost:8080/api/post/create-public
+Content-Type: application/json
+
+{
+    "title": "I am M.Luffy",
+    "theme": {
+        "linkImg": "/img/theme-donut.jpg",
+        "textColor" : "black"
+    },
+    "content": "Who will become the king of pirates",
+    "authorID": "63663512aaf9e3ff171b94a5",
+    "listHeart": ["63663512aaf9e3ff171b94a5", "63667268cebfaa004252c670"],
+    "type" : "theme"
+}
+

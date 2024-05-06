@@ -1,0 +1,79 @@
+// Customize Radio
+.MuiRadio-root {
+  &.MuiRadio-colorPrimary {
+    @apply text-text4 dark:text-text2;
+    &.Mui-checked {
+      @apply text-primary;
+    }
+  }
+  & .MuiSvgIcon-root {
+    @apply w-5 h-5;
+  }
+}
+
+// Customize checkbox
+.MuiCheckbox-root {
+  &.Mui-checked,
+  &.MuiCheckbox-indeterminate {
+    @apply text-primary;
+  }
+  @apply text-iconColor;
+}
+
+// Customize Switch
+.css-julti5-MuiSwitch-root {
+  .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+    @apply text-primary;
+  }
+  .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked
+    + .MuiSwitch-track {
+    @apply bg-primary;
+  }
+}
+
+// Customize Menu
+.MuiPopperUnstyled-root {
+  & .MuiPaper-root {
+    @apply dark:bg-darkSoft2 dark:text-white;
+    & .MuiMenuItem-root {
+      @apply hover:dark:bg-gray-700;
+    }
+  }
+}
+
+// Customize Skeleton
+.dark-skeleton {
+  & .MuiSkeleton-root {
+    @apply dark:bg-gray-600;
+  }
+}
+
+// Customize Tabs
+.MuiTabs-root {
+  & .MuiButtonBase-root {
+    @apply text-text3 dark:text-text4;
+    &.Mui-selected {
+      @apply text-primary pointer-events-none;
+    }
+  }
+  & .MuiTabs-indicator {
+    height: 3px;
+    @apply bg-primary rounded-xl;
+  }
+}
+
+// Custom Dialog
+.MuiDialog-container {
+  .MuiPaper-root {
+    width: 400px;
+    max-width: 450px;
+    @apply dark:bg-darkSecondary dark:text-white;
+  }
+}
+
+// Custom Table
+.MuiTableRow-root {
+  & .MuiTableCell-root {
+    @apply dark:text-white p-3 dark:border-b-gray-600;
+  }
+}

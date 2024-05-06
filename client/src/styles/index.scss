@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "loading";
+@import "active";
+@import "mui";
+
+@layer base {
+  body {
+    @apply font-body text-text1 bg-lite dark:bg-darkLite dark:text-white;
+  }
+  input,
+  textarea {
+    @apply outline-none resize-none placeholder:font-normal placeholder:dark:text-text3 placeholder:text-text4;
+  }
+  video {
+    max-height: 450px;
+  }
+}
+
+@layer utilities {
+  .scroll-custom {
+    /* width */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      @apply bg-transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      @apply bg-iconColor bg-opacity-50 rounded-lg;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #888;
+      @apply bg-opacity-50;
+    }
+  }
+
+  body.hide-scroll {
+    overflow: hidden;
+  }
+
+  .show-modal {
+    animation: showModal linear 0.25s;
+    @keyframes showModal {
+      from {
+        opacity: 0.3;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// Custom swiper
+.swiper-theme {
+  .swiper-slide {
+    @apply select-none;
+  }
+  .swiper-button-prev {
+    left: 2px;
+  }
+  .swiper-button-next {
+    right: 2px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-text2 bg-white bg-opacity-60 h-[27px] translate-y-2 rounded-full;
+    &::after {
+      font-size: 14px;
+    }
+  }
+}
+
+.swiper-backdrop {
+  @apply select-none;
+  .swiper-button-disabled {
+    visibility: hidden;
+  }
+  .swiper-button-prev {
+    left: 20px;
+  }
+  .swiper-button-next {
+    right: 20px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply bg-white bg-opacity-30 h-[84px] w-10 text-text2 dark:text-text3 -translate-y-1/2 transition-all;
+    &:hover {
+      @apply bg-opacity-50 dark:text-text1;
+    }
+  }
+}
